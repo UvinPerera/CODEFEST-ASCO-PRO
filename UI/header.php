@@ -7,17 +7,17 @@ function getHeader()
         <div class="col-sm-10 col-12">
         <div class="container-fluid headerFont">
             <div class="row ">
-                    <div class="col-12"><p class="login">Hi,';
+                    <div class="col-12"><p class="login">Hi,&ensp;';
                     
                       if(isset($_SESSION["userData"]))
                       {
                         $user=$_SESSION["userData"];
-                        echo '<i class="fa fa-user fa-fw"></i> $user[1] $user[2]';
+                        echo '<img src="images/Student Male_52px.png" width="10%"> $user[1] $user[2]';
                         echo '&ensp; <a href="Logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a></p></div>';
                       }
                       else
                       {
-                        echo '<a href="Login.php"><i class="fa fa-user fa-fw"></i> Login</a></p></div>';
+                        echo '<a href="Login.php"><img src="images/Student Male_52px.png" width="1.5%"> Login</a></p></div>';
                       }
              echo '       
             </div>
@@ -50,6 +50,11 @@ function getProfile()
                 <div class="row">
                     <div class="col-12"><i class="fa fa-user" aria-hidden="true"></i> Name</div>
                     <div class="col-12"><i class="fa fa-envelope" aria-hidden="true"></i> Email</div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12"><hr></div>
+                    <div class="col-12"><a href=""><i class="fa fa-user" aria-hidden="true"></i> Account Settings</a></div>
 
                 </div>
             </div>

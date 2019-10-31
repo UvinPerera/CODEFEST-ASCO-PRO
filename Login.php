@@ -110,13 +110,13 @@ form label{
                             <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Email or Username
                         </div>
                         <div class="col-12 mb-md-4 ml-3">
-                            <input type="text" id="userName" name="userName" class="form-control mb-2 mr-sm-2"  placeholder="Email or Username" style="width:100%; height: 50px;"></form></br>
+                            <input type="text" id="userName" name="userName" class="form-control mb-2 mr-sm-2"  placeholder="Email or Username" style="width:100%; height: 50px;"></br>
                         </div>
                         <div class="col-12 mb-2 ml-3">
                             <i class="fa fa-lock" aria-hidden="true"></i>&nbsp; Password    
                         </div>
                         <div class="col-12 mb-md-4 ml-3">
-                            <input type="password" id="password" name="password" class="form-control mb-2 mr-sm-2"  placeholder="Password" style="width:100%;height: 50px;"></form></br>
+                            <input type="password" id="password" name="password" class="form-control mb-2 mr-sm-2"  placeholder="Password" style="width:100%;height: 50px;"></br>
                         </div>
                         <div class="col-12  ml-3">
                             <button type="button" class="btn mb-2" style="width:100%;" onclick="valid();">Login</button>
