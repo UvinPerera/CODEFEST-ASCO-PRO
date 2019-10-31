@@ -1,35 +1,38 @@
 <?php
 //  $utype=$_SESSION["utype"];
-$utype="Student";
+$utype="Moderator";
  ?>
 <div class='col-xl-2 col-lg-3 pt-5 sidenav'>
     <ul class='pb-5 cat' style='list-style: none; font-size: 18px; padding-left: 10px;'>
-
+    <?php if($utype=="Student")
+    {
+        echo "
         <li>
-            <i class='fa fa-home' aria-hidden='true'></i> COURSES
+            <img src='images/course_50px.png' width='10%'> COURSES
             <ul class='pb-5 pl-4 cat' style='list-style: none; font-size: 15px'>
                 <li>
-                    <a href='mycourses.php' id='mycour'><i class='fa fa-home' aria-hidden='true'></i> Following Courses</a>
+                    <a href='mycourses.php' id='mycour'><img src='images/course_50px.png' width='8%'> Following Courses</a>
                 </li>
                 <li>
-                    <a href='propertyView.php' id='viewp'><i class='fa fa-home' aria-hidden='true'></i> Other Courses</a>
+                    <a href='othercourse.php' id='othercs'><img src='images/course_50px.png' width='8%'> Recommended Courses</a>
                 </li>
                 <hr>
             </ul>
-        </li>
-        <?php if($utype=="Director")
+        </li>";
+    }?>
+        <?php if($utype=="Moderator")
         {
             echo "
-        <li>
-            <i class='fa fa-building' aria-hidden='true'></i> BRANCHES
+            <li>
+            <img src='images/course_50px.png' width='10%'> COURSES
             <ul class='pb-5 pl-4 cat' style='list-style: none; font-size: 15px'>
                 <li>
-                    <a href='branchNew.php' id='addb'><i class='fa fa-building' aria-hidden='true'></i> Add New Branch</a>
+                    <a href='moderCourseView.php' id='mycour'><img src='images/course_50px.png' width='8%'> View Courses</a>
                 </li>
                 <li>
-                    <a href='branchView.php' id='viewb'><i class='fa fa-building' aria-hidden='true'></i> View & Edit Branches</a>
-                    <hr>
+                    <a href='addCourse.php' id='addcrs'><img src='images/course_50px.png' width='8%'> Add Courses</a>
                 </li>
+                <hr>
             </ul>
         </li>";
         }?>

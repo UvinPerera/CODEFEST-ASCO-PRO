@@ -1,6 +1,3 @@
-@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css");
 @import url("https://fonts.googleapis.com/css?family=Comfortaa" );
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
 @font-face {
@@ -82,7 +79,7 @@
     margin-left: 5px;
     margin-right: 5px;
 }
-.users:hover, #orderCon:hover {
+.users:hover, #orderCon:hover, .users2:hover {
     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
   }
   .subHead{
@@ -97,6 +94,9 @@
 }
 .container{
     font-family: 'Comfortaa', cursive;
+}
+.cards{
+    padding-left: 12%;
 }
 .logo {
     background: -webkit-linear-gradient( rgba(36, 4, 242, 1) 0%, rgba(7, 2, 140, 1));
@@ -366,6 +366,9 @@ color: rgba(7, 2, 140, 1);
      .addStar{
     font-size: 2em; 
     }
+    .cards{
+        padding-left: 12%;
+    }
   }
   @media screen and (max-width: 576px) {
     .rn, nav{
@@ -399,6 +402,9 @@ color: rgba(7, 2, 140, 1);
     .bottom{
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+    .cards{
+        padding-left: 0%;
     }
 
 }

@@ -112,7 +112,7 @@ form label{
                                         <i class="fa fa-user" aria-hidden="true"></i>&nbsp; First Name
                                     </div>
                                     <div class="col-12 mb-md-4 ml-3">
-                                        <input type="text" id="fname" name="fname" class="form-control mb-2 mr-sm-2"  placeholder="First Name" style="width:100%; height: 50px;"></form></br>
+                                        <input type="text" id="fname" name="fname" class="form-control mb-2 mr-sm-2"  placeholder="First Name" style="width:100%; height: 50px;"></br>
                                     </div>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@ form label{
                                         <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Last Name
                                     </div>
                                     <div class="col-12 mb-md-4 ml-3">
-                                        <input type="text" id="lname" name="lname" class="form-control mb-2 mr-sm-2"  placeholder="Last Name" style="width:100%; height: 50px;"></form></br>
+                                        <input type="text" id="lname" name="lname" class="form-control mb-2 mr-sm-2"  placeholder="Last Name" style="width:100%; height: 50px;"></br>
                                     </div>
                                 </div>
                             </div>
@@ -132,7 +132,7 @@ form label{
                                         <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; Email
                                     </div>
                                     <div class="col-12 mb-md-4 ml-3">
-                                        <input type="text" id="email" name="email" class="form-control mb-2 mr-sm-2"  placeholder="Email Address" style="width:100%; height: 50px;"></form></br>
+                                        <input type="text" id="email" name="email" class="form-control mb-2 mr-sm-2"  placeholder="Email Address" style="width:100%; height: 50px;"></br>
                                     </div>
                                 </div>
                             </div>
@@ -142,7 +142,7 @@ form label{
                                         <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp; DOB
                                     </div>
                                     <div class="col-12 mb-md-4 ml-3">
-                                        <input type="date" id="dob" name="dob" class="form-control mb-2 mr-sm-2"  placeholder="DOB" style="width:100%; height: 50px;"></form></br>
+                                        <input type="date" id="dob" name="dob" class="form-control mb-2 mr-sm-2"  placeholder="DOB" style="width:100%; height: 50px;"></br>
                                     </div>
                                 </div>
                             </div>
@@ -162,7 +162,7 @@ form label{
                                         <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Username
                                     </div>
                                     <div class="col-12 mb-md-4 ml-3">
-                                        <input type="text" id="userName" name="userName" class="form-control mb-2 mr-sm-2"  placeholder="Username" style="width:100%; height: 50px;"></form></br>
+                                        <input type="text" id="userName" name="userName" class="form-control mb-2 mr-sm-2"  placeholder="Username" style="width:100%; height: 50px;"></br>
                                     </div>
                                 </div>
                             </div>
@@ -172,7 +172,7 @@ form label{
                                         <i class="fa fa-lock" aria-hidden="true"></i>&nbsp; Password    
                                     </div>
                                     <div class="col-12 mb-md-4 ml-3">
-                                        <input type="password" id="password" name="password" class="form-control mb-2 mr-sm-2"  placeholder="Password" style="width:100%;height: 50px;"></form></br>
+                                        <input type="password" id="password" name="password" class="form-control mb-2 mr-sm-2"  placeholder="Password" style="width:100%;height: 50px;"></br>
                                     </div>
                                 </div>
                             </div>
