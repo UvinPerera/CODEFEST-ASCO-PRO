@@ -34,7 +34,7 @@ include("UI/footer.php");
         <div class="col-xl-8 col-lg-6 offwhite">
             <div class="row"><div class="col-12 text-center"><h1>ADD EXAMS</h1> <hr></div></div>
             <div class="row pl-2">
-            <form class="form-inline pl-2 pt-4 pl-4" action="#" method="POST" id="loginForm" style="background-color:white;">   
+            <form class="form-inline pl-2 pt-4 pl-4" action="#" method="POST" id="loginForm" style="width:100%; background-color:white;">   
                 <div class="row" style="width:100%;"><div class="col-12"><hr></div><div class="col-12 text-center"><h3>Add Units</h3></div></div>
                 <div class="row m-0" style="width:100%">
                     <div class="col-sm-6">
@@ -49,19 +49,60 @@ include("UI/footer.php");
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-12"><hr></div>
+                    <div class="col-12">
                         <div class="row">
                             <div class="col-12 mb-2 ">
-                                &nbsp; New Unit Name
+                                <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Question
                             </div>
                             <div class="col-12 mb-md-4">
-                                <input type="text" id="nuname" name="nuname" class="form-control mb-2 mr-sm-2"  placeholder="New Unit Name" style="width:100%; height: 50px;">
+                                <input type="text" id="question" name="question" class="form-control mb-2 mr-sm-2"  placeholder="Question" style="width:100%; height: 50px;"></br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-6">
+                        <div class="row">
+                            <div class="col-12 mb-2">
+                                <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Answer 1
+                            </div>
+                            <div class="col-12 mb-md-4">
+                                <input type="text" id="an1" name="an1" class="form-control mb-2 mr-sm-2"  placeholder="Answer 1" style="width:100%; height: 50px;"></br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-6">
+                        <div class="row">
+                            <div class="col-12 mb-2">
+                                <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Answer 2
+                            </div>
+                            <div class="col-12 mb-md-4">
+                                <input type="text" id="an2" name="an2" class="form-control mb-2 mr-sm-2"  placeholder="Answer 2" style="width:100%; height: 50px;"></br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-6">
+                        <div class="row">
+                            <div class="col-12 mb-2">
+                                <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Answer 3
+                            </div>
+                            <div class="col-12 mb-md-4">
+                                <input type="text" id="an3" name="an3" class="form-control mb-2 mr-sm-2"  placeholder="Answer 3" style="width:100%; height: 50px;"></br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-6">
+                        <div class="row">
+                            <div class="col-12 mb-2">
+                                <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Answer 4
+                            </div>
+                            <div class="col-12 mb-md-4">
+                                <input type="text" id="an4" name="an4" class="form-control mb-2 mr-sm-2"  placeholder="Answer 4" style="width:100%; height: 50px;"></br>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6"></div>
                     <div class="col-12 col-sm-6" style="padding-top:32px;">
-                        <button type="button" class="btn mb-2" style="width:100%; height: 50px;">Add Unit</button>
+                        <button type="button" name="addQues" id="addQues" class="btn mb-2" style="width:100%; height: 50px;">Add Quesion</button>
                     </div>
                 </div>
                 
