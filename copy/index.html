@@ -1,11 +1,3 @@
-<?php
-session_start();
-$actual_link = (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] === "on" ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-//$actual_link="HomePage.php";
-$_SESSION["url"]=$actual_link;
-include("UI/header.php");
-include("UI/footer.php");
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -20,7 +12,12 @@ include("UI/footer.php");
   <link rel="stylesheet" href="css/main.css" type="text/css">
   <script src="js/SmoothScroll.js"></script>
   <script src="js/script.js"></script>
-
+  <script src="jquery.js"></script> 
+  <script> 
+  $(function(){
+    $("#includedContent").load("header.html"); 
+  });
+  </script> 
 <style type="text/css">
     body {
      }
@@ -126,8 +123,8 @@ include("UI/footer.php");
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
     <!--Logo , Heading & Login-->
-    <div class="container-fluid">
-      <?php getHeader(); ?>
+    <div class="container-fluid" id="includedContent">
+      
     </div>
     <!--Side Navigation Bar-->
     <nav id="myNavbar" class="navbar navbar-expand-sm sticky-top">
@@ -157,10 +154,10 @@ include("UI/footer.php");
         <!--slideshow-->
         <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block" src="Images/loginback.jpeg">
+            <img class="d-block" src="Images/piattaforma-e-learning1.jpg">
             </div>
             <div class="carousel-item">
-            <img class="d-block" src="Images/piattaforma-e-learning1.jpg">
+                <img class="d-block" src="Images/loginback.jpeg">
             </div>
             <div class="carousel-item">
                 <img class="d-block" src="Images/slide-6.jpg">
@@ -236,7 +233,8 @@ include("UI/footer.php");
         </div>
     </div>
     <!--Bottom-->
-    <?php getFooter(); ?>
+
+    
     <script>
 function valid()
 {
