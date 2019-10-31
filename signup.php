@@ -89,7 +89,7 @@ form label{
 	        if($resultRow[0]=="")
 	        {
                 echo "<div class='row justify-content-center'>
-                        <div class='col-sm-5 col-xs-12'>
+                        <div class='col-sm-8 col-xs-12'>
                             <div class='alert alert-danger'>
                                 <center><h5><b>Invalid Login Details</b></h5></center>
                             </div>
