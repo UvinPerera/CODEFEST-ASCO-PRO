@@ -39,6 +39,8 @@ include("UI/footer.php");
                 <div class="col-12 col-sm-3">
                     <select id="utype" name="utype" class="form-control" style="width:80%; height: 50px;">
                         <option>Select Type</option>
+                        <option value="moderator">Moderator</option>
+                        <option value="admin">Admin</option>
                     </select>
                     </div>
                     <div class="col-12 col-sm-3"><button type="button" class="btn btn-success">Change Type</button></div>
