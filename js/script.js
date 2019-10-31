@@ -4,6 +4,15 @@ setTimeout(function() {
     $('#overlay').modal('hide');
 }, 2000);
 
+window.onload = () => { 
+
+    // var webhost = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+    // webhost.parentNode.removeChild(webhost);
+    var metapageID = document.querySelector("meta[name=pageid]");
+    var pageid = metapageID.getAttribute("content");
+    var activeItem = document.getElementById(pageid);
+    activeItem.classList.add("active");
+  }
 
 $(document).ready(function(){
   $(".nav-item").click(function () {
@@ -73,4 +82,31 @@ $(document).ready(function(){
 
      
    }); 
+   $(document).ready(function(){
+    $(".users").click(function () {
+        if($(this).hasClass('show'))
+        {
+            x="show";
+        }
+        else
+        {
+            x="hide";
+        }
+        $("div").removeClass('show');
+            $("div").removeClass('hide');
+        $("div").addClass('hide');
+        if(x=="show")
+        {
+            $(this).removeClass('show');
+            $(this).removeClass('hide');
+            $(this).addClass('hide');
+        }
+        else
+        {
+            $(this).removeClass('show');
+            $(this).removeClass('hide');
+            $(this).addClass('show');
+        }
+    });
+});
 });

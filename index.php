@@ -1,6 +1,10 @@
 <?php
 session_start();
-
+$actual_link = (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] === "on" ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+//$actual_link="HomePage.php";
+$_SESSION["url"]=$actual_link;
+include("UI/header.php");
+include("UI/footer.php");
 ?>
 <!doctype html>
 <html lang="en">
@@ -120,47 +124,9 @@ session_start();
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
     <!--Logo , Heading & Login-->
     <div class="container-fluid">
-    <div class="row first" id="top">
-        <div class="col-sm-2 col-12"><center><a href="HomePage.php"><img class="img" src="Emblem_of_Sri_Lanka.svg.png"></a></center></div>
-        <div class="col-sm-10 col-12">
-        <div class="container headerFont">
-            <div class="row ">
-                    <div class="col-12"><p class="login">Hi, <?php 
-                      
-                      //$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-                      $actual_link="HomePage.php";
-                      $_SESSION["url"]=$actual_link;
-                      if(isset($_SESSION["userData"]))
-                      {
-                        $user=$_SESSION["userData"];
-                        echo "<i class='fa fa-user fa-fw'></i> $user[1] $user[2]";
-                        echo "&ensp; <a href='Logout.php'>Logout <i class='fa fa-sign-out' aria-hidden='true'></i></a></p></div>";
-                      }
-                      else
-                      {
-                        echo "<a href='Login.php'><i class='fa fa-user fa-fw'></i> Login</a></p></div>";
-                      }
-                      ?>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <p class="login"><?php if(isset($_SESSION["userData"]))
-                {
-                  if($_SESSION["usertype"]=="user"){echo "<a href='MyBooks.php'>My Account</a>";}
-                  else{ echo "<a href='SearchBooks.php'>Admin Panel</a>";}
-                }?></p>
-              </div>
-            </div>
-            <div class="row rn ">
-                <div class="col-12 col-sm-11 col-lg-10">
-                    <center><h3 class="display-3 heading1">ASOC UNIVERSITY</h3></center>
-                </div>
-            </div>
-        </div>
-        </div>
+      <?php getHeader(); ?>
     </div>
-    </div>
-    <!--Navigation Bar-->
+    <!--Side Navigation Bar-->
     <nav id="myNavbar" class="navbar navbar-expand-sm sticky-top">
                 <a class="navbar-brand" href="#"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -188,13 +154,13 @@ session_start();
         <!--slideshow-->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block" src="Images/Interior_view_of_Stockholm_Public_Library.jpg">
+            <img class="d-block" src="Images/piattaforma-e-learning1.jpg">
             </div>
             <div class="carousel-item">
-                <img class="d-block" src="Images/photo-1524995997946-a1c2e315a42f.jpg">
+                <img class="d-block" src="Images/loginback.jpeg">
             </div>
             <div class="carousel-item">
-                <img class="d-block" src="Images/whatley-2-2000x0-c-default.jpg">
+                <img class="d-block" src="Images/slide-6.jpg">
             </div>
         </div>
         <!--Left & Right Buttons-->
@@ -229,7 +195,7 @@ session_start();
                 </div>
                 <div class="col-sm-7">
                     <h1 class="slideanimUP newh">Contact</h1>
-                    <p class="slideanimUP">Contact us and we'll get back to you within 24 hours.</p>
+                    <p class="slideanimUP">Contact us and we'll get back to you within 24 hours.</p>  
                     <p class="slideanimUP"><i class="fa fa-phone-square red" aria-hidden="true"></i> +94772535348</p>
                     <p class="slideanimUP"><a href="mailto:asocpro4@gmail.com?Subject=Contact"><i class="fa fa-envelope red" aria-hidden="true"></i> asocpro4@gmail.com</a></p>
                 </div>
@@ -262,14 +228,12 @@ session_start();
     <div id="section4" class="container-fluid foot">
         <div clss="row rowFoot" >
               <div class="col-12">
-                <center><h4 class="display-4 heading2"><i class="fa fa-quote-left" aria-hidden="true"></i>Reading Completes Us!<i class="fa fa-quote-right" aria-hidden="true"></i></h4></center>
+                <center><h4 class="display-4 heading2"><i class="fa fa-quote-left" aria-hidden="true"></i>E - Learning!<i class="fa fa-quote-right" aria-hidden="true"></i></h4></center>
               </div>
         </div>
     </div>
     <!--Bottom-->
-    <div class="container-fluid bg-grey bottom">
-            <center><a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></center>
-    </div>
+    <?php getFooter(); ?>
     <script>
 function valid()
 {

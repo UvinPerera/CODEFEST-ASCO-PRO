@@ -64,21 +64,24 @@ form label{
       border-radius: 10px;
   }
   body{
-    background: url("Images/photo-1524995997946-a1c2e315a42f.jpg") no-repeat center center fixed; 
+    background: url("Images/loginback.jpeg") no-repeat center center fixed; 
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
+  }
+  .logo{
+      max-width:300px;
   }
 </style>
 </head>
 <body class="">
     <div class="container">
         <div class="row">
-            <div class="col-12"><center><a href="index.php"><img class="img" src="Emblem_of_Sri_Lanka.svg.png"></a></center></div>
+            <div class="col-12 pt-2"><center><a href="index.php"><img class="img-fluid logo" src="images/logo.png"></a></center></div>
         </div>
         <div class="row">
-            <div class="col-12 headerFont"><center><h2 style="color: white;"><b>ASOC University</b></h2></center></div>
+            <!-- <div class="col-12 headerFont"><center><h2 style="color: white;"><b>ASOC University</b></h2></center></div> -->
         </div>
         <?php
         if(isset($_POST["userName"]))
