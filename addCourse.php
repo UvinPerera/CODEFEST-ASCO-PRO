@@ -55,10 +55,12 @@ include("UI/footer.php");
                     <div class="col-sm-6">
                         <div class="row">
                             <div class="col-12 mb-2 ml-3">
-                                <i class="fa fa-user" aria-hidden="true"></i>&nbsp; New Course Name
+                                <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Select Course
                             </div>
                             <div class="col-12 mb-md-4 ml-3">
-                                <input type="text" id="cname" name="cname" class="form-control mb-2 mr-sm-2"  placeholder="New Course Name" style="width:100%; height: 50px;"></br>
+                                <select type="text" id="cname" name="cname" class="form-control mb-2 mr-sm-2"  placeholder="New Course Name" style="width:100%; height: 50px;">
+                                <option value="">Select Course</option>
+                                </select>
                             </div>
                         </div>
                     </div>
