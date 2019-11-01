@@ -45,6 +45,12 @@ $utype=$_COOKIE["utype"];
                 <li>
                     <a href='addCourse.php' id='addcrs'><img src='images/add_course_50px.png' width='8%'> Add Courses</a>
                 </li>
+                <hr>
+            </ul>
+        </li>
+        <li>
+            <img src='images/exam_50px.png' width='10%'> EXAMS
+            <ul class='pb-5 pl-4 cat' style='list-style: none; font-size: 15px'>
                 <li>
                     <a href='memCrsUp.php' id='mycour'><img src='images/edit_member_50px.png' width='8%'> Members Course Update</a>
                 </li>

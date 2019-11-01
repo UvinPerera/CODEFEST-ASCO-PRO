@@ -18,8 +18,6 @@ if(isset($_POST["userName"]))
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julius+Sans+One">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
-<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
 
 <style type="text/css">
 .img{
@@ -86,20 +84,20 @@ form label{
             <!-- <div class="col-12 headerFont"><center><h2 style="color: white;"><b>ASOC University</b></h2></center></div> -->
         </div>
         <?php
-        // if(isset($_POST["userName"]))
-        // {
-	    //     if($resultRow[0]=="")
-	    //     {
-        //         echo "<div class='row justify-content-center'>
-        //                 <div class='col-sm-8 col-xs-12'>
-        //                     <div class='alert alert-danger'>
-        //                         <center><h5><b>Invalid Login Details</b></h5></center>
-        //                     </div>
-        //                 </div>
-        //             </div>";
-	    //     }
-        // }
-        // ?>
+        if(isset($_POST["userName"]))
+        {
+	        if($resultRow[0]=="")
+	        {
+                echo "<div class='row justify-content-center'>
+                        <div class='col-sm-8 col-xs-12'>
+                            <div class='alert alert-danger'>
+                                <center><h5><b>Invalid Login Details</b></h5></center>
+                            </div>
+                        </div>
+                    </div>";
+	        }
+        }
+        ?>
         <div class="row justify-content-center login">
             <div class="col-sm-8 col-xs-12">
                 <div class="panel">
@@ -154,7 +152,7 @@ form label{
                                         <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; Address
                                     </div>
                                     <div class="col-12 mb-md-4 ml-3">
-                                        <textarea  id="address" name="address" class="form-control mb-2 mr-sm-2"  placeholder="Address" style="width:100%; height: 50px;"></textarea></br>
+                                        <textarea type="date" id="address" name="address" class="form-control mb-2 mr-sm-2"  placeholder="Address" style="width:100%; height: 50px;"></textarea></br>
                                     </div>
                                 </div>
                             </div>
@@ -180,7 +178,7 @@ form label{
                             </div>
                             
                             <div class="col-12  ml-3">
-                                <button type="submit" class="btn mb-2" style="width:100%;">Sign Up</button>
+                                <button type="button" class="btn mb-2" style="width:100%;" onclick="valid();">Sign Up</button>
                             </div>
                         </div>
                     
@@ -227,26 +225,5 @@ form label{
             }
         }
     </script>
-<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
-
-    <script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCv7dyqkVhp-lQgjknTqF0GLOg6zqjaLDA",
-    authDomain: "codefest-69f68.firebaseapp.com",
-    databaseURL: "https://codefest-69f68.firebaseio.com",
-    projectId: "codefest-69f68",
-    storageBucket: "codefest-69f68.appspot.com",
-    messagingSenderId: "528784762467",
-    appId: "1:528784762467:web:14e2a02116d6d06302fa56",
-    measurementId: "G-1T56H3FCM6"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
-  
-</script>
-<script src="db.js"></script>
 </body>
 </html>
