@@ -1,10 +1,18 @@
 <?php
 session_start();
+if(isset($_COOKIE["utype"]))
+{ 
+    if($_COOKIE["utype"]!="moderator" && $_COOKIE["utype"]!="admin")
+    {
+        header("Location: index.php");
+    }
+}
 $actual_link = (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] === "on" ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 //$actual_link="HomePage.php";
 $_SESSION["url"]=$actual_link;
 include("UI/header.php");
 include("UI/footer.php");
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -34,38 +42,106 @@ include("UI/footer.php");
         <div class="col-xl-8 col-lg-6 offwhite">
             <div class="row"><div class="col-12 text-center"><h1>ADD COURSES</h1> <hr></div></div>
             <div class="row pl-2">
-            <form class="form-inline pl-2 pt-4" action="#" method="POST" id="loginForm" style="background-color:white;">   
+            <form class="form-inline pl-2 pt-4 pl-4" action="#" method="POST" id="loginForm" style="width:100%; background-color:white;">   
                 <div class="row" style="width:100%">
                     <div class="col-sm-6">
                         <div class="row">
-                            <div class="col-12 mb-2 ml-3">
-                                <i class="fa fa-user" aria-hidden="true"></i>&nbsp; New Course Name
+                            <div class="col-12 mb-2">
+                                &nbsp; New Course Name
                             </div>
-                            <div class="col-12 mb-md-4 ml-3">
+                            <div class="col-12 mb-md-4">
                                 <input type="text" id="cname" name="cname" class="form-control mb-2 mr-sm-2"  placeholder="New Course Name" style="width:100%; height: 50px;"></br>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6" style="padding-top:32px;">
-                        <button type="button" class="btn mb-2" style="width:100%; height: 50px;">Add Course</button>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-12 mb-2">
+                                &nbsp; Coordinator
+                            </div>
+                            <div class="col-12 mb-md-4">
+                                <input type="text" id="co" name="co" class="form-control mb-2 mr-sm-2"  placeholder="Coordinator" style="width:100%; height: 50px;"></br>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="row" style="width:100%;"><div class="col-12"><hr></div><div class="col-12 text-center"><h3>Add Course Content</h3></div></div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-12 col-sm-6" style="padding-top:32px;">
+                        <button type="submit" class="btn mb-2" style="width:100%; height: 50px;">Add Course</button>
+                    </div>
+                    </div>
+                </form>
+                <form class="form-inline pl-2 pt-4 pl-4" action="#" method="POST" id="loginForm2" style="width:100%; background-color:white;">
+                
+                <div class="row" style="width:100%;"><div class="col-12"><hr></div><div class="col-12 text-center"><h3>Add Units</h3></div></div>
                 <div class="row" style="width:100%">
                     <div class="col-sm-6">
                         <div class="row">
-                            <div class="col-12 mb-2 ml-3">
-                                <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Select Course
+                            <div class="col-12 mb-2 ">
+                                &nbsp; Select Course
                             </div>
-                            <div class="col-12 mb-md-4 ml-3">
-                                <select type="text" id="cname" name="cname" class="form-control mb-2 mr-sm-2"  placeholder="New Course Name" style="width:100%; height: 50px;">
+                            <div class="col-12 mb-md-4">
+                                <select type="text" id="scname" name="scname" class="form-control mb-2 mr-sm-2" style="width:100%; height: 50px;">
                                 <option value="">Select Course</option>
                                 </select>
                             </div>
                         </div>
                     </div>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-12 mb-2 ">
+                                &nbsp; New Unit Name
+                            </div>
+                            <div class="col-12 mb-md-4">
+                                <input type="text" id="nuname" name="nuname" class="form-control mb-2 mr-sm-2"  placeholder="New Unit Name" style="width:100%; height: 50px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6"></div>
                     <div class="col-12 col-sm-6" style="padding-top:32px;">
-                        <button type="button" class="btn mb-2" style="width:100%; height: 50px;">Add Course</button>
+                        <button type="submit" class="btn mb-2" style="width:100%; height: 50px;">Add Unit</button>
+                    </div>
+                    
+                </div>
+                </form>
+                <form class="form-inline pl-2 pt-4 pl-4" enctype="multipart/form-data" action="upload.php" method="POST" id="loginForm3" style="width:100%; background-color:white;">
+                <div class="row" style="width:100%;"><div class="col-12"><hr></div><div class="col-12 text-center"><h3>Add Content</h3></div></div>
+                <div class="row" style="width:100%">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-12 mb-2 ">
+                                &nbsp; Select Course
+                            </div>
+                            <div class="col-12 mb-md-4">
+                                <select type="text" id="scname2" name="scname2" class="form-control mb-2 mr-sm-2" style="width:100%; height: 50px;">
+                                <option value="">Select Course</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-12 mb-2 ">
+                                &nbsp; Select Unit
+                            </div>
+                            <div class="col-12 mb-md-4">
+                                <select type="text" id="scunit" name="scunit" class="form-control mb-2 mr-sm-2" style="width:100%; height: 50px;">
+                                <option value="">Select Unit</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-12 mb-2 ">
+                                &nbsp; Select File
+                            </div>
+                            <div class="col-12 mb-md-4">
+                                <input type="file" id="fileup" name="fileup" class="form-control mb-2 mr-sm-2" style="width:100%; height: 50px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6" style="padding-top:32px;">
+                        <button type="submit" class="btn mb-2" style="width:100%; height: 50px;">Add File</button>
                     </div>
                 </div>
             </form>
@@ -79,5 +155,28 @@ include("UI/footer.php");
 
     <!--Bottom-->
     <?php getFooter(); ?>
+
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
+
+    <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCv7dyqkVhp-lQgjknTqF0GLOg6zqjaLDA",
+    authDomain: "codefest-69f68.firebaseapp.com",
+    databaseURL: "https://codefest-69f68.firebaseio.com",
+    projectId: "codefest-69f68",
+    storageBucket: "codefest-69f68.appspot.com",
+    messagingSenderId: "528784762467",
+    appId: "1:528784762467:web:14e2a02116d6d06302fa56",
+    measurementId: "G-1T56H3FCM6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  </script>
+  <script  src="addCourse.js"></script>
+  <script src="addUnit.js"> </script>
+  <script src="addContent.js"></script>
 </body>
 </html>

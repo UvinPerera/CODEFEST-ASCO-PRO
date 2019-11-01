@@ -2,7 +2,7 @@
 session_start();
 if(isset($_COOKIE["utype"]))
 { 
-    if($_COOKIE["utype"]!="moderator" && $_COOKIE["utype"]!="admin")
+    if($_COOKIE["utype"]!="admin")
     {
         header("Location: index.php");
     }
@@ -17,7 +17,7 @@ include("UI/footer.php");
 <html lang="en">
 <head>
 <meta charset="utf-8">
-
+<meta name="pageid" content="mycour">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -28,6 +28,7 @@ include("UI/footer.php");
   <link rel="stylesheet" href="css/main.css" type="text/css">
   <script src="js/SmoothScroll.js"></script>
   <script src="js/script.js"></script>
+
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
     <!--Logo , Heading & Login-->
@@ -39,40 +40,11 @@ include("UI/footer.php");
         <?php include("UI/sidenav.php");?>
     <!--Course Section-->
         <div class="col-xl-8 col-lg-6 offwhite">
-            <div class="row"><div class="col-12 text-center"><h1>EXAMS</h1> <hr></div></div>
-            <div class="row users2">
-                <div class="col-sm-10 col-6"><h4></i> 1). Question 1 </h4></div>
-                <div class="container-fluid details">
-                    <hr>
-                    <div class="row">
-                        <form class="form-inline col-12" action="#" method="POST" id="loginForm">   
-                        <div class="row" style="width:100%">
-                            <div class="col-12">
-                                <input type="radio" name="answer" class="form-control mr-sm-2"> Answer 1</br>
-                            </div>
-                        </div>
-                        <div class="row" style="width:100%">
-                            <div class="col-12">
-                                <input type="radio" name="answer" class="form-control mr-sm-2"> Answer 2</br>
-                            </div>
-                        </div>
-                        <div class="row" style="width:100%">
-                            <div class="col-12">
-                                <input type="radio" name="answer" class="form-control mr-sm-2"> Answer 3</br>
-                            </div>
-                        </div>
-                        <div class="row" style="width:100%">
-                            <div class="col-12">
-                                <input type="radio" name="answer" class="form-control mr-sm-2"> Answer 4</br>
-                            </div>
-                        </div>
-                    
-                    </form>
-                    </div>
-                </div>
+            <div class="row"><div class="col-12 text-center"><h1>MEMBERS</h1> <hr></div></div>
+            <div id="card">
+            
             </div>
-
-
+            
         </div>
         <!--Profile-->
         <?php getProfile(); ?>
@@ -80,5 +52,25 @@ include("UI/footer.php");
 
     <!--Bottom-->
     <?php getFooter(); ?>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
+
+    <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCv7dyqkVhp-lQgjknTqF0GLOg6zqjaLDA",
+    authDomain: "codefest-69f68.firebaseapp.com",
+    databaseURL: "https://codefest-69f68.firebaseio.com",
+    projectId: "codefest-69f68",
+    storageBucket: "codefest-69f68.appspot.com",
+    messagingSenderId: "528784762467",
+    appId: "1:528784762467:web:14e2a02116d6d06302fa56",
+    measurementId: "G-1T56H3FCM6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  </script>
+  <script src="memberUpdate.js"></script>
 </body>
 </html>
