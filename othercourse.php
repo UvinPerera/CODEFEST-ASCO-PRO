@@ -1,5 +1,12 @@
 <?php
 session_start();
+if(isset($_COOKIE["utype"]))
+{ 
+    if($_COOKIE["utype"]!="student")
+    {
+        header("Location: index.php");
+    }
+}
 $actual_link = (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] === "on" ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 //$actual_link="HomePage.php";
 $_SESSION["url"]=$actual_link;

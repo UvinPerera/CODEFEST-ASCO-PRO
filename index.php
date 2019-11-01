@@ -157,10 +157,10 @@ include("UI/footer.php");
         <!--slideshow-->
         <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block" src="Images/piattaforma-e-learning1.jpg">
+              <img class="d-block" src="Images/loginback.jpeg">
             </div>
             <div class="carousel-item">
-                <img class="d-block" src="Images/loginback.jpeg">
+            <img class="d-block" src="Images/piattaforma-e-learning1.jpg">
             </div>
             <div class="carousel-item">
                 <img class="d-block" src="Images/slide-6.jpg">

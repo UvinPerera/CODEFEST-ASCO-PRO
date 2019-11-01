@@ -18,6 +18,8 @@ if(isset($_POST["userName"]))
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julius+Sans+One">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
 
 <style type="text/css">
 .img{
@@ -119,7 +121,7 @@ form label{
                             <input type="password" id="password" name="password" class="form-control mb-2 mr-sm-2"  placeholder="Password" style="width:100%;height: 50px;"></br>
                         </div>
                         <div class="col-12  ml-3">
-                            <button type="button" class="btn mb-2" style="width:100%;" onclick="valid();">Login</button>
+                            <button type="submit" class="btn mb-2" style="width:100%;">Login</button>
                         </div>
                         <div class="col-12  ml-3 text-center pt-2">
                             <p><a href="signup.php">New User?</a></p>
@@ -169,5 +171,25 @@ form label{
             }
         }
     </script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
+
+    <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCv7dyqkVhp-lQgjknTqF0GLOg6zqjaLDA",
+    authDomain: "codefest-69f68.firebaseapp.com",
+    databaseURL: "https://codefest-69f68.firebaseio.com",
+    projectId: "codefest-69f68",
+    storageBucket: "codefest-69f68.appspot.com",
+    messagingSenderId: "528784762467",
+    appId: "1:528784762467:web:14e2a02116d6d06302fa56",
+    measurementId: "G-1T56H3FCM6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  </script>
+  <script src="dbCheck.js"></script>
 </body>
 </html>
